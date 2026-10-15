@@ -1,0 +1,11 @@
+Device checklist. The simulator cannot prove silent mode.
+
+- Silent mode: alarm still rings with the ringer switch off.
+- Focus: alarm still rings while a Focus is on.
+- Killing the app mid-mission: backup should ring about 60 seconds later.
+- Reboot: a saved alarm still rings after the phone restarts.
+- Time zone change: the alarm follows the new local clock time.
+- DST: the alarm still fires at the set clock time across the change.
+- Low Power Mode: the alarm still rings.
+- AlarmKit permission denied: the alarm saves, and the banner says it will not ring.
+- A series that crosses midnight: slots before and after midnight all ring.
