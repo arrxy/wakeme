@@ -1,71 +1,72 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
+	classes = {
+	};
 	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB7706E9FBC31D7C8E186D7F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7615A59D0C58EB4F9F85D56 /* RootTabView.swift */; };
-		DA4492AD7D8D77248B8DDA6F /* WakeMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF37E724EFF5D4DAD292638B /* WakeMeApp.swift */; };
-		0BC903BFDE2492A68C40BBDF /* WakeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1A74202DAD53CDC1499A6 /* WakeTheme.swift */; };
 		02CF9C14B9FD4BD57B4F5AF0 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE9BF1795EC47AC0C1B495 /* Alarm.swift */; };
-		30C8A5B7745FD94E9568DF32 /* AlarmRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C77061E407ACC629C6A025 /* AlarmRecord.swift */; };
-		84A3035992CBE4B457FF194D /* AlarmScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574C6D9CA7D369C3123F84E /* AlarmScheduler.swift */; };
-		4BD34709AA32E3EBDA172650 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091B204BBC2CED8B6DCFB90 /* AlarmSound.swift */; };
-		CE43F86E4CF6D5652A318D41 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77448FF9212D9771AEF0F8F3 /* AppSettings.swift */; };
-		3683E6AD4469F0D0CC13FAB9 /* MathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550F7C5D321411230516B8D /* MathGenerator.swift */; };
-		09679B101D4B611C8768AA6C /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E71C5368EA00F4675DACC /* Mission.swift */; };
-		EADB63A212A49D8A864873CE /* SeriesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B19C1077E3B2FFD5EF281 /* SeriesGenerator.swift */; };
-		73EE461D11797E3D52606950 /* ShakeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EBB1A5EED4AC3D85960B41 /* ShakeCounter.swift */; };
-		FF849475D6078031F9ECA4A4 /* SpokenDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2538CC182AC3E86BB2AC3 /* SpokenDraft.swift */; };
-		D5E4391DC237072CAA49CEC4 /* TypedPhrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89CD3DB467650F0C77A7EF /* TypedPhrase.swift */; };
-		F45DC030D1ADA6B82475A0A8 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D584FD960728B44A1B9F98 /* Weekday.swift */; };
-		7BB2B6DE87AE8BCF45D0310C /* AlarmEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732FA9E26D73DA2EC50FE5A7 /* AlarmEditorView.swift */; };
-		FD249F89A356CEF0B7A3E9E3 /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89190533AAFA3EEFFC4C75DD /* AlarmListView.swift */; };
-		FF264FE216A8D8E0E892DB0B /* MissionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D063D14D3830E8DF287799 /* MissionPickerView.swift */; };
-		C62A0FBA116D70351E7A40D5 /* MissionHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBE38010DF5CA3DDED06708 /* MissionHostView.swift */; };
-		2F1DD0E1FFA9DE51E2A342F9 /* SeriesEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CC707B427060F9FE9D2147 /* SeriesEditorView.swift */; };
-		D916D286FDDB86FF3C3C317B /* SpeakAlarmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7D77D22E4A8D1051F65C4 /* SpeakAlarmsView.swift */; };
-		4CF83BFB2733E71F342FEC83 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A39E112B60A008D01DF03 /* StopwatchView.swift */; };
-		B5A6F6B5C65B4E5E2334BF27 /* TimersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D69B311F2E7C3B3E529DC7 /* TimersView.swift */; };
-		AA06D04F84E9B2F9BB67043C /* WorldClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BB95109B9420050FF2338 /* WorldClockView.swift */; };
-		13FE99645025BBF954C7ABBD /* MathMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09A4BB405AD2C00DBD5A5B /* MathMissionView.swift */; };
-		6B4D7F0383EED223B21B0E1F /* ShakeMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC5128AFE57D0C1B371571 /* ShakeMissionView.swift */; };
-		6A63EB5F12340309058BE912 /* TypeMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA91B082B0C8B64A31AB72 /* TypeMissionView.swift */; };
-		B58046803B2134C5AE6BBA07 /* AlarmIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9E96A8AAEE4DAB985BC772 /* AlarmIntents.swift */; };
-		9C994BC4CF5313E3976812CE /* AlarmKitScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B54567B2D67A149D647F34 /* AlarmKitScheduler.swift */; };
-		490067628ACF763E6C9466A4 /* AlarmParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE5E1525FC3FE1F1160F575 /* AlarmParser.swift */; };
 		06502C3C6A0489C9C2DF03A7 /* AlarmParserLLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D6A3B6B25CBBD2CB768A01 /* AlarmParserLLM.swift */; };
+		09679B101D4B611C8768AA6C /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5E71C5368EA00F4675DACC /* Mission.swift */; };
+		0BC903BFDE2492A68C40BBDF /* WakeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1A74202DAD53CDC1499A6 /* WakeTheme.swift */; };
+		13FE99645025BBF954C7ABBD /* MathMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09A4BB405AD2C00DBD5A5B /* MathMissionView.swift */; };
 		174A5B95EAC6722193C7C8B7 /* AlarmScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9896CF8139A6F5917BF4C3E7 /* AlarmScheduling.swift */; };
-		D52C53597AC24377A04BCDCA /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B13CD8289A8EF5A863F079 /* AudioService.swift */; };
-		7181A2E53CC8FC659C36A5A7 /* RingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4FF5AB2ED445A165956FA /* RingSession.swift */; };
+		2F1DD0E1FFA9DE51E2A342F9 /* SeriesEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CC707B427060F9FE9D2147 /* SeriesEditorView.swift */; };
 		2F56BC462CBA7504E9D66D6B /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC61076AD6198A96C773759 /* SpeechService.swift */; };
-		B561B47160C7EDFA082554DE /* WakeMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */; };
-		F0A9F9BDFF767DFCD59ED796 /* Beacon.caf in Resources */ = {isa = PBXBuildFile; fileRef = A9DF2E81402CAB8835D5CBB5 /* Beacon.caf */; };
-		729012CC8DB9F466D28DB297 /* Circuit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9D12C33796E9F0409D04C7C6 /* Circuit.caf */; };
-		8C23D895DE12A6FE990F947D /* Radial.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14122513DC908EC986F3B968 /* Radial.caf */; };
+		30C8A5B7745FD94E9568DF32 /* AlarmRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C77061E407ACC629C6A025 /* AlarmRecord.swift */; };
+		3683E6AD4469F0D0CC13FAB9 /* MathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550F7C5D321411230516B8D /* MathGenerator.swift */; };
+		490067628ACF763E6C9466A4 /* AlarmParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE5E1525FC3FE1F1160F575 /* AlarmParser.swift */; };
+		4BD34709AA32E3EBDA172650 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091B204BBC2CED8B6DCFB90 /* AlarmSound.swift */; };
+		4CF83BFB2733E71F342FEC83 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A39E112B60A008D01DF03 /* StopwatchView.swift */; };
+		6A63EB5F12340309058BE912 /* TypeMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA91B082B0C8B64A31AB72 /* TypeMissionView.swift */; };
+		6B4D7F0383EED223B21B0E1F /* ShakeMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC5128AFE57D0C1B371571 /* ShakeMissionView.swift */; };
 		6CB2E3DACD0FA2758AFB6366 /* Rise.caf in Resources */ = {isa = PBXBuildFile; fileRef = 382427716D68EE824987CF55 /* Rise.caf */; };
+		7181A2E53CC8FC659C36A5A7 /* RingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4FF5AB2ED445A165956FA /* RingSession.swift */; };
+		729012CC8DB9F466D28DB297 /* Circuit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9D12C33796E9F0409D04C7C6 /* Circuit.caf */; };
+		73EE461D11797E3D52606950 /* ShakeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EBB1A5EED4AC3D85960B41 /* ShakeCounter.swift */; };
+		7BB2B6DE87AE8BCF45D0310C /* AlarmEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732FA9E26D73DA2EC50FE5A7 /* AlarmEditorView.swift */; };
+		84A3035992CBE4B457FF194D /* AlarmScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574C6D9CA7D369C3123F84E /* AlarmScheduler.swift */; };
 		89C714C57180C5AA63E6CCB7 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59BD41132A8FB9178C516DB /* AlarmLiveActivityWidget.swift */; };
-		FE4D186B41FEA4A5F1184B1C /* WakeMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */; };
-		FB68030956957FE9628B81AB /* WakeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F2830BCD157BEF93E8D1E /* WakeLogicTests.swift */; };
+		8C23D895DE12A6FE990F947D /* Radial.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14122513DC908EC986F3B968 /* Radial.caf */; };
+		9C994BC4CF5313E3976812CE /* AlarmKitScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B54567B2D67A149D647F34 /* AlarmKitScheduler.swift */; };
+		AA06D04F84E9B2F9BB67043C /* WorldClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88BB95109B9420050FF2338 /* WorldClockView.swift */; };
+		AB7706E9FBC31D7C8E186D7F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7615A59D0C58EB4F9F85D56 /* RootTabView.swift */; };
+		B561B47160C7EDFA082554DE /* WakeMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */; };
+		B58046803B2134C5AE6BBA07 /* AlarmIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9E96A8AAEE4DAB985BC772 /* AlarmIntents.swift */; };
+		B5A6F6B5C65B4E5E2334BF27 /* TimersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D69B311F2E7C3B3E529DC7 /* TimersView.swift */; };
+		C62A0FBA116D70351E7A40D5 /* MissionHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBE38010DF5CA3DDED06708 /* MissionHostView.swift */; };
+		CE43F86E4CF6D5652A318D41 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77448FF9212D9771AEF0F8F3 /* AppSettings.swift */; };
+		D52C53597AC24377A04BCDCA /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B13CD8289A8EF5A863F079 /* AudioService.swift */; };
+		D5E4391DC237072CAA49CEC4 /* TypedPhrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89CD3DB467650F0C77A7EF /* TypedPhrase.swift */; };
+		D916D286FDDB86FF3C3C317B /* SpeakAlarmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7D77D22E4A8D1051F65C4 /* SpeakAlarmsView.swift */; };
+		DA4492AD7D8D77248B8DDA6F /* WakeMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF37E724EFF5D4DAD292638B /* WakeMeApp.swift */; };
+		EADB63A212A49D8A864873CE /* SeriesGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B19C1077E3B2FFD5EF281 /* SeriesGenerator.swift */; };
+		F0A9F9BDFF767DFCD59ED796 /* Beacon.caf in Resources */ = {isa = PBXBuildFile; fileRef = A9DF2E81402CAB8835D5CBB5 /* Beacon.caf */; };
 		F281AF52EF70728E593D270F /* AlarmLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B442E42980596EBCD246D51 /* AlarmLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F45DC030D1ADA6B82475A0A8 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D584FD960728B44A1B9F98 /* Weekday.swift */; };
+		FB68030956957FE9628B81AB /* WakeLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F2830BCD157BEF93E8D1E /* WakeLogicTests.swift */; };
+		FD249F89A356CEF0B7A3E9E3 /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89190533AAFA3EEFFC4C75DD /* AlarmListView.swift */; };
+		FE4D186B41FEA4A5F1184B1C /* WakeMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */; };
+		FF264FE216A8D8E0E892DB0B /* MissionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D063D14D3830E8DF287799 /* MissionPickerView.swift */; };
+		FF849475D6078031F9ECA4A4 /* SpokenDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2538CC182AC3E86BB2AC3 /* SpokenDraft.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		99E6A51DA0B86FE48AEB34ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0661F517A86C8F5C87C0EDBA;
-			remoteInfo = AlarmLiveActivity;
-		};
 		323C3B257A357C9ED069C500 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E3435DDA2687639586BF0B70;
 			remoteInfo = WakeMe;
+		};
+		99E6A51DA0B86FE48AEB34ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0661F517A86C8F5C87C0EDBA;
+			remoteInfo = AlarmLiveActivity;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -84,61 +85,54 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		84337AD8D27FCD69AF2C4FC2 /* WakeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B442E42980596EBCD246D51 /* AlarmLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AlarmLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFDED23FA58339F9273F6C84 /* WakeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7615A59D0C58EB4F9F85D56 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
-		BF37E724EFF5D4DAD292638B /* WakeMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeMeApp.swift; sourceTree = "<group>"; };
 		12A1A74202DAD53CDC1499A6 /* WakeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeTheme.swift; sourceTree = "<group>"; };
-		F1CE9BF1795EC47AC0C1B495 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		62C77061E407ACC629C6A025 /* AlarmRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecord.swift; sourceTree = "<group>"; };
-		F574C6D9CA7D369C3123F84E /* AlarmScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduler.swift; sourceTree = "<group>"; };
-		D091B204BBC2CED8B6DCFB90 /* AlarmSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
-		77448FF9212D9771AEF0F8F3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		E550F7C5D321411230516B8D /* MathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGenerator.swift; sourceTree = "<group>"; };
-		BE5E71C5368EA00F4675DACC /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
-		7B2B19C1077E3B2FFD5EF281 /* SeriesGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesGenerator.swift; sourceTree = "<group>"; };
+		14122513DC908EC986F3B968 /* Radial.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radial.caf; sourceTree = "<group>"; };
+		1B442E42980596EBCD246D51 /* AlarmLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AlarmLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B13CD8289A8EF5A863F079 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeMetadata.swift; sourceTree = "<group>"; };
+		382427716D68EE824987CF55 /* Rise.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rise.caf; sourceTree = "<group>"; };
+		4BAC5128AFE57D0C1B371571 /* ShakeMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeMissionView.swift; sourceTree = "<group>"; };
 		58EBB1A5EED4AC3D85960B41 /* ShakeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeCounter.swift; sourceTree = "<group>"; };
-		E2D2538CC182AC3E86BB2AC3 /* SpokenDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokenDraft.swift; sourceTree = "<group>"; };
-		5D89CD3DB467650F0C77A7EF /* TypedPhrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedPhrase.swift; sourceTree = "<group>"; };
-		74D584FD960728B44A1B9F98 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
-		732FA9E26D73DA2EC50FE5A7 /* AlarmEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditorView.swift; sourceTree = "<group>"; };
-		89190533AAFA3EEFFC4C75DD /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
-		82D063D14D3830E8DF287799 /* MissionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionPickerView.swift; sourceTree = "<group>"; };
-		6CBE38010DF5CA3DDED06708 /* MissionHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionHostView.swift; sourceTree = "<group>"; };
-		D5CC707B427060F9FE9D2147 /* SeriesEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEditorView.swift; sourceTree = "<group>"; };
-		64B7D77D22E4A8D1051F65C4 /* SpeakAlarmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakAlarmsView.swift; sourceTree = "<group>"; };
 		5D2A39E112B60A008D01DF03 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		5D89CD3DB467650F0C77A7EF /* TypedPhrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedPhrase.swift; sourceTree = "<group>"; };
+		60B54567B2D67A149D647F34 /* AlarmKitScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmKitScheduler.swift; sourceTree = "<group>"; };
+		62C77061E407ACC629C6A025 /* AlarmRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRecord.swift; sourceTree = "<group>"; };
+		64B7D77D22E4A8D1051F65C4 /* SpeakAlarmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakAlarmsView.swift; sourceTree = "<group>"; };
+		68A4FF5AB2ED445A165956FA /* RingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSession.swift; sourceTree = "<group>"; };
+		6CBE38010DF5CA3DDED06708 /* MissionHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionHostView.swift; sourceTree = "<group>"; };
+		732FA9E26D73DA2EC50FE5A7 /* AlarmEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditorView.swift; sourceTree = "<group>"; };
+		74D584FD960728B44A1B9F98 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		74D6A3B6B25CBBD2CB768A01 /* AlarmParserLLM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmParserLLM.swift; sourceTree = "<group>"; };
+		77448FF9212D9771AEF0F8F3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		7B2B19C1077E3B2FFD5EF281 /* SeriesGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesGenerator.swift; sourceTree = "<group>"; };
+		82D063D14D3830E8DF287799 /* MissionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionPickerView.swift; sourceTree = "<group>"; };
+		84337AD8D27FCD69AF2C4FC2 /* WakeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89190533AAFA3EEFFC4C75DD /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		8DC61076AD6198A96C773759 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		9896CF8139A6F5917BF4C3E7 /* AlarmScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduling.swift; sourceTree = "<group>"; };
+		9D12C33796E9F0409D04C7C6 /* Circuit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Circuit.caf; sourceTree = "<group>"; };
+		A9DF2E81402CAB8835D5CBB5 /* Beacon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beacon.caf; sourceTree = "<group>"; };
+		AFAA91B082B0C8B64A31AB72 /* TypeMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMissionView.swift; sourceTree = "<group>"; };
+		BE5E71C5368EA00F4675DACC /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		BF37E724EFF5D4DAD292638B /* WakeMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeMeApp.swift; sourceTree = "<group>"; };
+		C7615A59D0C58EB4F9F85D56 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		D091B204BBC2CED8B6DCFB90 /* AlarmSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
+		D59BD41132A8FB9178C516DB /* AlarmLiveActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmLiveActivityWidget.swift; sourceTree = "<group>"; };
+		D5CC707B427060F9FE9D2147 /* SeriesEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesEditorView.swift; sourceTree = "<group>"; };
+		DC9E96A8AAEE4DAB985BC772 /* AlarmIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmIntents.swift; sourceTree = "<group>"; };
+		DCE5E1525FC3FE1F1160F575 /* AlarmParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmParser.swift; sourceTree = "<group>"; };
+		DFDED23FA58339F9273F6C84 /* WakeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2D2538CC182AC3E86BB2AC3 /* SpokenDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokenDraft.swift; sourceTree = "<group>"; };
+		E550F7C5D321411230516B8D /* MathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGenerator.swift; sourceTree = "<group>"; };
 		E6D69B311F2E7C3B3E529DC7 /* TimersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersView.swift; sourceTree = "<group>"; };
 		E88BB95109B9420050FF2338 /* WorldClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockView.swift; sourceTree = "<group>"; };
-		FD09A4BB405AD2C00DBD5A5B /* MathMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMissionView.swift; sourceTree = "<group>"; };
-		4BAC5128AFE57D0C1B371571 /* ShakeMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeMissionView.swift; sourceTree = "<group>"; };
-		AFAA91B082B0C8B64A31AB72 /* TypeMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMissionView.swift; sourceTree = "<group>"; };
-		DC9E96A8AAEE4DAB985BC772 /* AlarmIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmIntents.swift; sourceTree = "<group>"; };
-		60B54567B2D67A149D647F34 /* AlarmKitScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmKitScheduler.swift; sourceTree = "<group>"; };
-		DCE5E1525FC3FE1F1160F575 /* AlarmParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmParser.swift; sourceTree = "<group>"; };
-		74D6A3B6B25CBBD2CB768A01 /* AlarmParserLLM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmParserLLM.swift; sourceTree = "<group>"; };
-		9896CF8139A6F5917BF4C3E7 /* AlarmScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduling.swift; sourceTree = "<group>"; };
-		22B13CD8289A8EF5A863F079 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
-		68A4FF5AB2ED445A165956FA /* RingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSession.swift; sourceTree = "<group>"; };
-		8DC61076AD6198A96C773759 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
-		2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeMetadata.swift; sourceTree = "<group>"; };
-		D59BD41132A8FB9178C516DB /* AlarmLiveActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmLiveActivityWidget.swift; sourceTree = "<group>"; };
+		F1CE9BF1795EC47AC0C1B495 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		F574C6D9CA7D369C3123F84E /* AlarmScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduler.swift; sourceTree = "<group>"; };
 		F58F2830BCD157BEF93E8D1E /* WakeLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeLogicTests.swift; sourceTree = "<group>"; };
-		A9DF2E81402CAB8835D5CBB5 /* Beacon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beacon.caf; sourceTree = "<group>"; };
-		9D12C33796E9F0409D04C7C6 /* Circuit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Circuit.caf; sourceTree = "<group>"; };
-		14122513DC908EC986F3B968 /* Radial.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radial.caf; sourceTree = "<group>"; };
-		382427716D68EE824987CF55 /* Rise.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rise.caf; sourceTree = "<group>"; };
+		FD09A4BB405AD2C00DBD5A5B /* MathMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6EFAB1ECC0D092E20FE51FCD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		11EF39465FB5B37CF41E367D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,28 +147,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EFAB1ECC0D092E20FE51FCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		518DA81DB9B99529C0C0AEBE = {
+		10B173F7DC5054EA38ADF2E5 /* MissionPicker */ = {
 			isa = PBXGroup;
 			children = (
-				2BC3AE3F6F8CCF5E2F0AB1E4 /* WakeMe */,
-				B46A6AFB1DC88CE23F6E63F1 /* Shared */,
-				73C6CB698C45907FF0B3F0FE /* AlarmLiveActivity */,
-				1E7CF250C7C6CECB7A834EA7 /* WakeMeTests */,
-				547D009064F7C3F13BEF3460 /* Products */,
+				82D063D14D3830E8DF287799 /* MissionPickerView.swift */,
 			);
+			path = MissionPicker;
 			sourceTree = "<group>";
 		};
-		547D009064F7C3F13BEF3460 /* Products */ = {
+		1E7CF250C7C6CECB7A834EA7 /* WakeMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				84337AD8D27FCD69AF2C4FC2 /* WakeMe.app */,
-				1B442E42980596EBCD246D51 /* AlarmLiveActivity.appex */,
-				DFDED23FA58339F9273F6C84 /* WakeMeTests.xctest */,
+				F58F2830BCD157BEF93E8D1E /* WakeLogicTests.swift */,
 			);
-			name = Products;
+			path = WakeMeTests;
+			sourceTree = "<group>";
+		};
+		22FCE809D8BD5CC2CEE05735 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E3999A6B861F9F7D652FEE46 /* AlarmEditor */,
+				3706D47663A84B7473C1282B /* AlarmList */,
+				10B173F7DC5054EA38ADF2E5 /* MissionPicker */,
+				4773644686D5DEB8D0FE5B57 /* Ringing */,
+				9551BEE2FDB103EA1035E93E /* Series */,
+				8664833AF8EBE21D9610752E /* SpeakAlarms */,
+				895F8BBFA809EAE212E0BD3B /* Stopwatch */,
+				FFD6643E143C2FCE2E1D8549 /* Timers */,
+				4AC83F6CA31E993081113B94 /* WorldClock */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 		2BC3AE3F6F8CCF5E2F0AB1E4 /* WakeMe */ = {
@@ -190,38 +202,12 @@
 			path = WakeMe;
 			sourceTree = "<group>";
 		};
-		B46A6AFB1DC88CE23F6E63F1 /* Shared */ = {
+		3706D47663A84B7473C1282B /* AlarmList */ = {
 			isa = PBXGroup;
 			children = (
-				2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */,
+				89190533AAFA3EEFFC4C75DD /* AlarmListView.swift */,
 			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		73C6CB698C45907FF0B3F0FE /* AlarmLiveActivity */ = {
-			isa = PBXGroup;
-			children = (
-				D59BD41132A8FB9178C516DB /* AlarmLiveActivityWidget.swift */,
-			);
-			path = AlarmLiveActivity;
-			sourceTree = "<group>";
-		};
-		1E7CF250C7C6CECB7A834EA7 /* WakeMeTests */ = {
-			isa = PBXGroup;
-			children = (
-				F58F2830BCD157BEF93E8D1E /* WakeLogicTests.swift */,
-			);
-			path = WakeMeTests;
-			sourceTree = "<group>";
-		};
-		6FDFCDB2A7B092DC72E2C5ED /* App */ = {
-			isa = PBXGroup;
-			children = (
-				C7615A59D0C58EB4F9F85D56 /* RootTabView.swift */,
-				BF37E724EFF5D4DAD292638B /* WakeMeApp.swift */,
-				12A1A74202DAD53CDC1499A6 /* WakeTheme.swift */,
-			);
-			path = App;
+			path = AlarmList;
 			sourceTree = "<group>";
 		};
 		3F7D28B0D67E5C8C21E935FE /* Domain */ = {
@@ -243,30 +229,41 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		22FCE809D8BD5CC2CEE05735 /* Features */ = {
+		4773644686D5DEB8D0FE5B57 /* Ringing */ = {
 			isa = PBXGroup;
 			children = (
-				E3999A6B861F9F7D652FEE46 /* AlarmEditor */,
-				3706D47663A84B7473C1282B /* AlarmList */,
-				10B173F7DC5054EA38ADF2E5 /* MissionPicker */,
-				4773644686D5DEB8D0FE5B57 /* Ringing */,
-				9551BEE2FDB103EA1035E93E /* Series */,
-				8664833AF8EBE21D9610752E /* SpeakAlarms */,
-				895F8BBFA809EAE212E0BD3B /* Stopwatch */,
-				FFD6643E143C2FCE2E1D8549 /* Timers */,
-				4AC83F6CA31E993081113B94 /* WorldClock */,
+				6CBE38010DF5CA3DDED06708 /* MissionHostView.swift */,
 			);
-			path = Features;
+			path = Ringing;
 			sourceTree = "<group>";
 		};
-		FCEAF1DBA008394AD1E4805B /* Missions */ = {
+		4AC83F6CA31E993081113B94 /* WorldClock */ = {
 			isa = PBXGroup;
 			children = (
-				FD09A4BB405AD2C00DBD5A5B /* MathMissionView.swift */,
-				4BAC5128AFE57D0C1B371571 /* ShakeMissionView.swift */,
-				AFAA91B082B0C8B64A31AB72 /* TypeMissionView.swift */,
+				E88BB95109B9420050FF2338 /* WorldClockView.swift */,
 			);
-			path = Missions;
+			path = WorldClock;
+			sourceTree = "<group>";
+		};
+		518DA81DB9B99529C0C0AEBE = {
+			isa = PBXGroup;
+			children = (
+				2BC3AE3F6F8CCF5E2F0AB1E4 /* WakeMe */,
+				B46A6AFB1DC88CE23F6E63F1 /* Shared */,
+				73C6CB698C45907FF0B3F0FE /* AlarmLiveActivity */,
+				1E7CF250C7C6CECB7A834EA7 /* WakeMeTests */,
+				547D009064F7C3F13BEF3460 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		547D009064F7C3F13BEF3460 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84337AD8D27FCD69AF2C4FC2 /* WakeMe.app */,
+				1B442E42980596EBCD246D51 /* AlarmLiveActivity.appex */,
+				DFDED23FA58339F9273F6C84 /* WakeMeTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5BD6618B0EAC8F3AA0BC7760 /* Services */ = {
@@ -284,52 +281,30 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		6FDFCDB2A7B092DC72E2C5ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C7615A59D0C58EB4F9F85D56 /* RootTabView.swift */,
+				BF37E724EFF5D4DAD292638B /* WakeMeApp.swift */,
+				12A1A74202DAD53CDC1499A6 /* WakeTheme.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		73C6CB698C45907FF0B3F0FE /* AlarmLiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				D59BD41132A8FB9178C516DB /* AlarmLiveActivityWidget.swift */,
+			);
+			path = AlarmLiveActivity;
+			sourceTree = "<group>";
+		};
 		7DE3007040939E3E04B083E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E07BD552770F693439E631A4 /* Sounds */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		E3999A6B861F9F7D652FEE46 /* AlarmEditor */ = {
-			isa = PBXGroup;
-			children = (
-				732FA9E26D73DA2EC50FE5A7 /* AlarmEditorView.swift */,
-			);
-			path = AlarmEditor;
-			sourceTree = "<group>";
-		};
-		3706D47663A84B7473C1282B /* AlarmList */ = {
-			isa = PBXGroup;
-			children = (
-				89190533AAFA3EEFFC4C75DD /* AlarmListView.swift */,
-			);
-			path = AlarmList;
-			sourceTree = "<group>";
-		};
-		10B173F7DC5054EA38ADF2E5 /* MissionPicker */ = {
-			isa = PBXGroup;
-			children = (
-				82D063D14D3830E8DF287799 /* MissionPickerView.swift */,
-			);
-			path = MissionPicker;
-			sourceTree = "<group>";
-		};
-		4773644686D5DEB8D0FE5B57 /* Ringing */ = {
-			isa = PBXGroup;
-			children = (
-				6CBE38010DF5CA3DDED06708 /* MissionHostView.swift */,
-			);
-			path = Ringing;
-			sourceTree = "<group>";
-		};
-		9551BEE2FDB103EA1035E93E /* Series */ = {
-			isa = PBXGroup;
-			children = (
-				D5CC707B427060F9FE9D2147 /* SeriesEditorView.swift */,
-			);
-			path = Series;
 			sourceTree = "<group>";
 		};
 		8664833AF8EBE21D9610752E /* SpeakAlarms */ = {
@@ -348,20 +323,20 @@
 			path = Stopwatch;
 			sourceTree = "<group>";
 		};
-		FFD6643E143C2FCE2E1D8549 /* Timers */ = {
+		9551BEE2FDB103EA1035E93E /* Series */ = {
 			isa = PBXGroup;
 			children = (
-				E6D69B311F2E7C3B3E529DC7 /* TimersView.swift */,
+				D5CC707B427060F9FE9D2147 /* SeriesEditorView.swift */,
 			);
-			path = Timers;
+			path = Series;
 			sourceTree = "<group>";
 		};
-		4AC83F6CA31E993081113B94 /* WorldClock */ = {
+		B46A6AFB1DC88CE23F6E63F1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E88BB95109B9420050FF2338 /* WorldClockView.swift */,
+				2B3A7F255FB14D1034B51F1C /* WakeMetadata.swift */,
 			);
-			path = WorldClock;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		E07BD552770F693439E631A4 /* Sounds */ = {
@@ -375,28 +350,35 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		E3999A6B861F9F7D652FEE46 /* AlarmEditor */ = {
+			isa = PBXGroup;
+			children = (
+				732FA9E26D73DA2EC50FE5A7 /* AlarmEditorView.swift */,
+			);
+			path = AlarmEditor;
+			sourceTree = "<group>";
+		};
+		FCEAF1DBA008394AD1E4805B /* Missions */ = {
+			isa = PBXGroup;
+			children = (
+				FD09A4BB405AD2C00DBD5A5B /* MathMissionView.swift */,
+				4BAC5128AFE57D0C1B371571 /* ShakeMissionView.swift */,
+				AFAA91B082B0C8B64A31AB72 /* TypeMissionView.swift */,
+			);
+			path = Missions;
+			sourceTree = "<group>";
+		};
+		FFD6643E143C2FCE2E1D8549 /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				E6D69B311F2E7C3B3E529DC7 /* TimersView.swift */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E3435DDA2687639586BF0B70 /* WakeMe */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D97B77EAD2380603A3F2A82 /* Build configuration list for PBXNativeTarget "WakeMe" */;
-			buildPhases = (
-				4821909E9BF9E73E471FEA84 /* Sources */,
-				6EFAB1ECC0D092E20FE51FCD /* Frameworks */,
-				F667297ED3AB90EAC07798D4 /* Resources */,
-				BAE1492BDE49D13FF7E211EB /* Embed Foundation Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EE1DEC3FECAFB049B3EB4C70 /* PBXTargetDependency */,
-			);
-			name = WakeMe;
-			productName = WakeMe;
-			productReference = 84337AD8D27FCD69AF2C4FC2 /* WakeMe.app */;
-			productType = "com.apple.product-type.application";
-		};
 		0661F517A86C8F5C87C0EDBA /* AlarmLiveActivity */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B429FCF8E65333911689421 /* Build configuration list for PBXNativeTarget "AlarmLiveActivity" */;
@@ -432,6 +414,25 @@
 			productReference = DFDED23FA58339F9273F6C84 /* WakeMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E3435DDA2687639586BF0B70 /* WakeMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D97B77EAD2380603A3F2A82 /* Build configuration list for PBXNativeTarget "WakeMe" */;
+			buildPhases = (
+				4821909E9BF9E73E471FEA84 /* Sources */,
+				6EFAB1ECC0D092E20FE51FCD /* Frameworks */,
+				F667297ED3AB90EAC07798D4 /* Resources */,
+				BAE1492BDE49D13FF7E211EB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1DEC3FECAFB049B3EB4C70 /* PBXTargetDependency */,
+			);
+			name = WakeMe;
+			productName = WakeMe;
+			productReference = 84337AD8D27FCD69AF2C4FC2 /* WakeMe.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -441,16 +442,26 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
-					E3435DDA2687639586BF0B70 = { CreatedOnToolsVersion = 27.0; };
-					0661F517A86C8F5C87C0EDBA = { CreatedOnToolsVersion = 27.0; };
-					A700229C3AC2DAE057FE5B27 = { CreatedOnToolsVersion = 27.0; TestTargetID = E3435DDA2687639586BF0B70; };
+					0661F517A86C8F5C87C0EDBA = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					A700229C3AC2DAE057FE5B27 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = E3435DDA2687639586BF0B70;
+					};
+					E3435DDA2687639586BF0B70 = {
+						CreatedOnToolsVersion = 27.0;
+					};
 				};
 			};
 			buildConfigurationList = 1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject "WakeMe" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			knownRegions = ( en, Base, );
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 518DA81DB9B99529C0C0AEBE;
 			productRefGroup = 547D009064F7C3F13BEF3460 /* Products */;
 			projectDirPath = "";
@@ -464,6 +475,20 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		25B7C02526925672442B0E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56E96530BC9DC2EBA288692 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F667297ED3AB90EAC07798D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,11 +500,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B56E96530BC9DC2EBA288692 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
-		25B7C02526925672442B0E39 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		37A859133C5B7A49CE597D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C714C57180C5AA63E6CCB7 /* AlarmLiveActivityWidget.swift in Sources */,
+				FE4D186B41FEA4A5F1184B1C /* WakeMetadata.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4821909E9BF9E73E471FEA84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,15 +555,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37A859133C5B7A49CE597D35 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89C714C57180C5AA63E6CCB7 /* AlarmLiveActivityWidget.swift in Sources */,
-				FE4D186B41FEA4A5F1184B1C /* WakeMetadata.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BDA9E329ACCE0E746140CA84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,12 +566,106 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EE1DEC3FECAFB049B3EB4C70 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 0661F517A86C8F5C87C0EDBA /* AlarmLiveActivity */; targetProxy = 99E6A51DA0B86FE48AEB34ED /* PBXContainerItemProxy */; };
-		6B4E3CE9C39CCBA72A607E8E /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = E3435DDA2687639586BF0B70 /* WakeMe */; targetProxy = 323C3B257A357C9ED069C500 /* PBXContainerItemProxy */; };
+		6B4E3CE9C39CCBA72A607E8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3435DDA2687639586BF0B70 /* WakeMe */;
+			targetProxy = 323C3B257A357C9ED069C500 /* PBXContainerItemProxy */;
+		};
+		EE1DEC3FECAFB049B3EB4C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0661F517A86C8F5C87C0EDBA /* AlarmLiveActivity */;
+			targetProxy = 99E6A51DA0B86FE48AEB34ED /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		92E165A9035A603BE73D2E62 /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { 
+		16ACE556BD5CA3C51FD3F043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WakeMe/WakeMe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2PQCZH5MN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WakeMe/Info.plist;
+				INFOPLIST_KEY_NSAlarmKitUsageDescription = "WakeMe rings alarms through silent mode and Focus so a wake-up mission can finish.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "WakeMe turns speech into alarms on this iPhone. Audio never leaves the device.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "WakeMe counts shakes to finish a wake-up mission.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "WakeMe transcribes alarms on this iPhone.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aritro.WakeMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		82000B87E0EC13AD7FD6DA43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WakeMe/WakeMe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2PQCZH5MN;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WakeMe/Info.plist;
+				INFOPLIST_KEY_NSAlarmKitUsageDescription = "WakeMe rings alarms through silent mode and Focus so a wake-up mission can finish.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "WakeMe turns speech into alarms on this iPhone. Audio never leaves the device.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "WakeMe counts shakes to finish a wake-up mission.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "WakeMe transcribes alarms on this iPhone.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aritro.WakeMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		84F9322E66EE35E48CCB22FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B2PQCZH5MN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aritro.WakeMe.WakeMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WakeMe";
+			};
+			name = Debug;
+		};
+		92E165A9035A603BE73D2E62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -564,8 +681,55 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
- }; name = Debug; };
-		E1D3BBA94590957B0374D6E9 /* Release */ = { isa = XCBuildConfiguration; buildSettings = { 
+			};
+			name = Debug;
+		};
+		95D0608A0642C6FDF4DD406E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B2PQCZH5MN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aritro.WakeMe.WakeMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WakeMe";
+			};
+			name = Release;
+		};
+		CC75E1056C3F0D7E633EEBD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AlarmLiveActivity/AlarmLiveActivity.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2PQCZH5MN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlarmLiveActivity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aritro.WakeMe.AlarmLiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E1D3BBA94590957B0374D6E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -577,125 +741,43 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
- }; name = Release; };
-		82000B87E0EC13AD7FD6DA43 /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { 
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
- 
-				CODE_SIGN_ENTITLEMENTS = WakeMe/WakeMe.entitlements;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_KEY_NSAlarmKitUsageDescription = "WakeMe rings alarms through silent mode and Focus so a wake-up mission can finish.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "WakeMe turns speech into alarms on this iPhone. Audio never leaves the device.";
-				INFOPLIST_KEY_NSMotionUsageDescription = "WakeMe counts shakes to finish a wake-up mission.";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "WakeMe transcribes alarms on this iPhone.";
-				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wakeme.WakeMe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_STRICT_CONCURRENCY = minimal;
- ENABLE_TESTABILITY = YES; }; name = Debug; };
-		16ACE556BD5CA3C51FD3F043 /* Release */ = { isa = XCBuildConfiguration; buildSettings = { 
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
- 
-				CODE_SIGN_ENTITLEMENTS = WakeMe/WakeMe.entitlements;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_KEY_NSAlarmKitUsageDescription = "WakeMe rings alarms through silent mode and Focus so a wake-up mission can finish.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "WakeMe turns speech into alarms on this iPhone. Audio never leaves the device.";
-				INFOPLIST_KEY_NSMotionUsageDescription = "WakeMe counts shakes to finish a wake-up mission.";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "WakeMe transcribes alarms on this iPhone.";
-				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wakeme.WakeMe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_STRICT_CONCURRENCY = minimal;
- }; name = Release; };
-		FD2DD70200319FF7456A87FC /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { 
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
- 
+			};
+			name = Release;
+		};
+		FD2DD70200319FF7456A87FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AlarmLiveActivity/AlarmLiveActivity.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2PQCZH5MN;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlarmLiveActivity/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wakeme.WakeMe.AlarmLiveActivity;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aritro.WakeMe.AlarmLiveActivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_STRICT_CONCURRENCY = minimal;
- }; name = Debug; };
-		CC75E1056C3F0D7E633EEBD6 /* Release */ = { isa = XCBuildConfiguration; buildSettings = { 
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
- 
-				CODE_SIGN_ENTITLEMENTS = AlarmLiveActivity/AlarmLiveActivity.entitlements;
-				INFOPLIST_FILE = AlarmLiveActivity/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wakeme.WakeMe.AlarmLiveActivity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_STRICT_CONCURRENCY = minimal;
- }; name = Release; };
-		84F9322E66EE35E48CCB22FE /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { 
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GENERATE_INFOPLIST_FILE = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wakeme.WakeMeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WakeMe";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
- }; name = Debug; };
-		95D0608A0642C6FDF4DD406E /* Release */ = { isa = XCBuildConfiguration; buildSettings = { 
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GENERATE_INFOPLIST_FILE = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wakeme.WakeMeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WakeMe";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
- }; name = Release; };
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject "WakeMe" */ = {
+		0F471B4923D46E58DCE40A0E /* Build configuration list for PBXNativeTarget "WakeMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92E165A9035A603BE73D2E62 /* Debug */,
-				E1D3BBA94590957B0374D6E9 /* Release */,
+				84F9322E66EE35E48CCB22FE /* Debug */,
+				95D0608A0642C6FDF4DD406E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -709,20 +791,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject "WakeMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E165A9035A603BE73D2E62 /* Debug */,
+				E1D3BBA94590957B0374D6E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8B429FCF8E65333911689421 /* Build configuration list for PBXNativeTarget "AlarmLiveActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD2DD70200319FF7456A87FC /* Debug */,
 				CC75E1056C3F0D7E633EEBD6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0F471B4923D46E58DCE40A0E /* Build configuration list for PBXNativeTarget "WakeMeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84F9322E66EE35E48CCB22FE /* Debug */,
-				95D0608A0642C6FDF4DD406E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

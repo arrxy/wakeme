@@ -400,6 +400,7 @@ emit(f"\t\t{PROJECT_RELEASE} /* Release */ = {{ isa = XCBuildConfiguration; buil
 app_settings = """
 \t\t\t\tCODE_SIGN_ENTITLEMENTS = WakeMe/WakeMe.entitlements;
 \t\t\t\tENABLE_PREVIEWS = YES;
+\t\t\t\tINFOPLIST_FILE = WakeMe/Info.plist;
 \t\t\t\tINFOPLIST_KEY_NSAlarmKitUsageDescription = "WakeMe rings alarms through silent mode and Focus so a wake-up mission can finish.";
 \t\t\t\tINFOPLIST_KEY_NSMicrophoneUsageDescription = "WakeMe turns speech into alarms on this iPhone. Audio never leaves the device.";
 \t\t\t\tINFOPLIST_KEY_NSMotionUsageDescription = "WakeMe counts shakes to finish a wake-up mission.";

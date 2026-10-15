@@ -26,7 +26,7 @@ final class SpeechService: ObservableObject {
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setCategory(.record, mode: .measurement, options: [.duckOthers])
-            try session.setActive(true, options: .notifyOthersOnDeactivation)
+            try await Self.activate(session)
         } catch {
             statusLine = "Audio session failed"
             return
@@ -42,16 +42,23 @@ final class SpeechService: ObservableObject {
         let (stream, continuation) = AsyncStream<AnalyzerInput>.makeStream()
         inputBox.continuation = continuation
         let engine = AVAudioEngine()
-        let format = engine.inputNode.outputFormat(forBus: 0)
+        let hardwareFormat = engine.inputNode.outputFormat(forBus: 0)
+        let analysisFormat = await Self.analysisFormat(for: [transcriber], hardware: hardwareFormat)
+        guard let converter = AVAudioConverter(from: hardwareFormat, to: analysisFormat) else {
+            statusLine = "Could not start listening"
+            return
+        }
+        inputBox.converter = converter
         do {
-            try await analyzer.prepareToAnalyze(in: format)
-            engine.inputNode.installTap(onBus: 0, bufferSize: 4096, format: format) { [inputBox] buffer, _ in
-                guard let copy = Self.copy(buffer) else { return }
-                inputBox.continuation?.yield(AnalyzerInput(buffer: copy))
+            try await analyzer.prepareToAnalyze(in: analysisFormat)
+            engine.inputNode.installTap(onBus: 0, bufferSize: 4096, format: hardwareFormat) { [inputBox] buffer, _ in
+                guard let samples = inputBox.int16Samples(from: buffer) else { return }
+                inputBox.continuation?.yield(AnalyzerInput(buffer: samples))
             }
             engine.prepare()
             try engine.start()
         } catch {
+            inputBox.converter = nil
             statusLine = "Could not start listening"
             return
         }
@@ -76,6 +83,7 @@ final class SpeechService: ObservableObject {
         engine?.inputNode.removeTap(onBus: 0)
         engine?.stop()
         engine = nil
+        inputBox.converter = nil
         isListening = false
         await analyzer?.cancelAndFinishNow()
         analyzer = nil
@@ -93,19 +101,59 @@ final class SpeechService: ObservableObject {
         }
     }
 
-    private static func copy(_ buffer: AVAudioPCMBuffer) -> AVAudioPCMBuffer? {
-        guard let clone = AVAudioPCMBuffer(pcmFormat: buffer.format, frameCapacity: buffer.frameCapacity) else { return nil }
-        clone.frameLength = buffer.frameLength
-        let channels = Int(buffer.format.channelCount)
-        if let source = buffer.floatChannelData, let destination = clone.floatChannelData {
-            for channel in 0..<channels {
-                destination[channel].update(from: source[channel], count: Int(buffer.frameLength))
+    private static func activate(_ session: AVAudioSession) async throws {
+        if #available(iOS 27, *) {
+            try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
+                session.activate(options: []) { activated, error in
+                    if let error {
+                        continuation.resume(throwing: error)
+                    } else if activated {
+                        continuation.resume()
+                    } else {
+                        continuation.resume(throwing: CancellationError())
+                    }
+                }
             }
+        } else {
+            try session.setActive(true, options: .notifyOthersOnDeactivation)
         }
-        return clone
+    }
+
+    /// SpeechAnalyzer rejects the microphone's float buffers. It wants 16-bit integer PCM.
+    private static func analysisFormat(for modules: [any SpeechModule], hardware: AVAudioFormat) async -> AVAudioFormat {
+        if let best = await SpeechAnalyzer.bestAvailableAudioFormat(compatibleWith: modules, considering: hardware),
+           best.commonFormat == .pcmFormatInt16 {
+            return best
+        }
+        let rate = hardware.sampleRate > 0 ? hardware.sampleRate : 48_000
+        let channels = max(1, hardware.channelCount)
+        return AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: rate, channels: channels, interleaved: false)
+            ?? hardware
     }
 }
 
 private final class InputBox: @unchecked Sendable {
     var continuation: AsyncStream<AnalyzerInput>.Continuation?
+    var converter: AVAudioConverter?
+
+    func int16Samples(from buffer: AVAudioPCMBuffer) -> AVAudioPCMBuffer? {
+        guard let converter else { return nil }
+        let format = converter.outputFormat
+        let ratio = format.sampleRate / max(buffer.format.sampleRate, 1)
+        let frames = AVAudioFrameCount((Double(buffer.frameLength) * ratio).rounded(.up)) + 32
+        guard let output = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: max(frames, 1)) else { return nil }
+        var error: NSError?
+        var fed = false
+        let status = converter.convert(to: output, error: &error) { _, outStatus in
+            if fed {
+                outStatus.pointee = .noDataNow
+                return nil
+            }
+            fed = true
+            outStatus.pointee = .haveData
+            return buffer
+        }
+        guard error == nil, status != .error, output.frameLength > 0 else { return nil }
+        return output
+    }
 }
