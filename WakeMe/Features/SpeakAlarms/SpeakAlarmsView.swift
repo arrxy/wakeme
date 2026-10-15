@@ -234,7 +234,9 @@ struct SpeakAlarmsView: View {
     }
 
     private func rowDetail(_ draft: SpokenAlarmDraft) -> String {
-        var parts = [draft.record.repeatSummary.capitalizedFirst, draft.mission?.summary ?? "None"]
+        var parts = [draft.record.repeatSummary.capitalizedFirst]
+        if draft.label != "Alarm" { parts.append(draft.label) }
+        parts.append(draft.mission?.summary ?? "None")
         if draft.isDuplicate { parts.append("Already exists") }
         return parts.joined(separator: " · ")
     }

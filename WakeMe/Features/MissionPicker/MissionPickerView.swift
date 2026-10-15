@@ -5,6 +5,7 @@ struct MissionPickerView: View {
     var mission: Mission?
     var onDone: (Mission?) -> Void
 
+    @Environment(\.dismiss) private var dismiss
     @State private var choice: Choice = .none
     @State private var mathKind: MathKind = .arithmetic
     @State private var questionCount: Double = 5
@@ -215,6 +216,7 @@ struct MissionPickerView: View {
 
             Button {
                 onDone(currentMission)
+                dismiss()
             } label: {
                 Text("Done")
                     .font(.body.weight(.semibold))

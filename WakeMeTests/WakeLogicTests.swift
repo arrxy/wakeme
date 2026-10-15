@@ -125,6 +125,17 @@ final class WakeLogicTests: XCTestCase {
         XCTAssertFalse(drafts[3].include)
     }
 
+    func testIntervalPhraseKeepsMissionDetails() {
+        let text = "Set alarm from 7 AM to 8 AM in intervals of 15 minutes, also for the exercise, have arithmetic easy questions and two questions for each alarm."
+        let drafts = AlarmParser.parse(text, now: now, existing: [], calendar: calendar)
+        XCTAssertEqual(drafts.map(\.hour), [7, 7, 7, 7, 8])
+        XCTAssertEqual(drafts.map(\.minute), [0, 15, 30, 45, 0])
+        XCTAssertEqual(Set(drafts.compactMap(\.seriesID)).count, 1)
+        XCTAssertEqual(drafts.first?.label, "Exercise")
+        XCTAssertEqual(drafts.first?.mission, .math(kind: .arithmetic, count: 2, difficulty: .easy))
+        XCTAssertFalse(drafts.contains { $0.hour == 15 })
+    }
+
     func testSeriesPhrase() {
         let drafts = AlarmParser.parse("every 10 minutes from 6 to 7 on weekdays", now: now, existing: [], calendar: calendar)
         XCTAssertEqual(drafts.count, 7)

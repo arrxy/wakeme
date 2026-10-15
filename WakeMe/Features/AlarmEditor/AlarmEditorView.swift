@@ -286,6 +286,7 @@ private struct SoundPickerView: View {
                         }
                     }
                 }
+                .buttonStyle(.borderless)
                 .listRowBackground(WakeTheme.card)
             }
         }
@@ -294,5 +295,6 @@ private struct SoundPickerView: View {
         .background(WakeTheme.background)
         .navigationTitle("Sound")
         .navigationBarTitleDisplayMode(.inline)
+        .onDisappear { AudioService.shared.stop() }
     }
 }

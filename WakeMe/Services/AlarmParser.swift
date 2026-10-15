@@ -42,17 +42,10 @@ enum AlarmParser {
         defaultMission: Mission?,
         calendar: Calendar
     ) -> [SpokenAlarmDraft] {
-        let pattern = #"every\s+(\d+)\s+minutes?\s+from\s+(.+?)\s+to\s+(.+?)(?:$|\.|,)"#
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]),
-              let match = regex.firstMatch(in: text, range: NSRange(text.startIndex..., in: text)),
-              match.numberOfRanges == 4,
-              let gapRange = Range(match.range(at: 1), in: text),
-              let startRange = Range(match.range(at: 2), in: text),
-              let endRange = Range(match.range(at: 3), in: text),
-              let gap = Int(text[gapRange]),
-              let start = firstTime(in: String(text[startRange])),
-              let end = firstTime(in: String(text[endRange]))
-        else { return [] }
+        guard let span = seriesSpan(in: text) else { return [] }
+        let gap = span.gap
+        let start = span.start
+        let end = span.end
         let slots = SeriesGenerator.slots(
             firstHour: start.hour,
             firstMinute: start.minute,
@@ -173,8 +166,42 @@ enum AlarmParser {
     private struct ClockTime { var hour: Int; var minute: Int }
     private struct DayPlan { var weekdays: [Weekday]; var tomorrow: Bool }
 
+    private static func seriesSpan(in text: String) -> (gap: Int, start: ClockTime, end: ClockTime)? {
+        let patterns: [(String, Int, Int, Int)] = [
+            (#"every\s+(\d+)\s+minutes?\s+from\s+(.+?)\s+to\s+(.+?)(?:$|\.|,)"#, 1, 2, 3),
+            (#"from\s+(.+?)\s+to\s+(.+?)\s+(?:in\s+)?intervals?\s+of\s+(\d+)\s+minutes?"#, 3, 1, 2),
+            (#"from\s+(.+?)\s+to\s+(.+?)\s+every\s+(\d+)\s+minutes?"#, 3, 1, 2),
+            (#"(?:in\s+)?intervals?\s+of\s+(\d+)\s+minutes?\s+from\s+(.+?)\s+to\s+(.+?)(?:$|\.|,)"#, 1, 2, 3)
+        ]
+        for (pattern, gapGroup, startGroup, endGroup) in patterns {
+            if let span = matchSeries(text, pattern: pattern, gapGroup: gapGroup, startGroup: startGroup, endGroup: endGroup) {
+                return span
+            }
+        }
+        return nil
+    }
+
+    private static func matchSeries(
+        _ text: String,
+        pattern: String,
+        gapGroup: Int,
+        startGroup: Int,
+        endGroup: Int
+    ) -> (gap: Int, start: ClockTime, end: ClockTime)? {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]),
+              let match = regex.firstMatch(in: text, range: NSRange(text.startIndex..., in: text)),
+              let gapRange = Range(match.range(at: gapGroup), in: text),
+              let startRange = Range(match.range(at: startGroup), in: text),
+              let endRange = Range(match.range(at: endGroup), in: text),
+              let gap = Int(text[gapRange]), gap > 0,
+              let start = firstTime(in: String(text[startRange])),
+              let end = firstTime(in: String(text[endRange]))
+        else { return nil }
+        return (gap, start, end)
+    }
+
     private static func times(in text: String) -> [ClockTime] {
-        let pattern = #"(?<![\d:])(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)?"#
+        let pattern = #"(?<![\d:])(\d{1,2})(?::(\d{2}))?(?:\s*(a\.?m\.?|p\.?m\.?))?"#
         guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else { return [] }
         let ns = text as NSString
         var found: [ClockTime] = []
@@ -204,8 +231,10 @@ enum AlarmParser {
                 else if hour == 0 { hour = 0 }
             }
             if found.contains(where: { $0.hour == hour && $0.minute == minute }) { continue }
-            let tail = ns.substring(from: match.range.location + match.range.length).lowercased()
-            if tail.hasPrefix(" question") || tail.hasPrefix(" minute") { continue }
+            let tail = ns.substring(from: match.range.location + match.range.length)
+                .trimmingCharacters(in: .whitespaces)
+                .lowercased()
+            if tail.hasPrefix("minute") || tail.hasPrefix("question") || tail.hasPrefix("interval") { continue }
             found.append(ClockTime(hour: hour, minute: minute))
         }
         return found
@@ -234,11 +263,18 @@ enum AlarmParser {
 
     private static func mission(in text: String, defaultMission: Mission?) -> (mission: Mission?, usedDefault: Bool) {
         let lower = text.lowercased()
-        if lower.contains("geometry") {
-            return (.math(kind: .geometry, count: 3, difficulty: .medium), false)
-        }
-        if lower.contains("arithmetic") || lower.contains("math") {
-            return (.math(kind: .arithmetic, count: 5, difficulty: .hard), false)
+        if lower.contains("geometry") || lower.contains("arithmetic") || lower.contains("math") {
+            let kind: MathKind = lower.contains("geometry") && !lower.contains("arithmetic") ? .geometry : .arithmetic
+            let fallbackCount = kind == .geometry ? 3 : 5
+            let fallbackDifficulty: Difficulty = kind == .geometry ? .medium : .hard
+            return (
+                .math(
+                    kind: kind,
+                    count: questionCount(in: lower) ?? fallbackCount,
+                    difficulty: namedDifficulty(in: lower) ?? fallbackDifficulty
+                ),
+                false
+            )
         }
         if lower.contains("shake") {
             return (.shake(count: 40, strength: .firm), false)
@@ -249,13 +285,36 @@ enum AlarmParser {
         return (defaultMission, true)
     }
 
+    private static func questionCount(in text: String) -> Int? {
+        let pattern = #"\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten)\s+questions?\b"#
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]),
+              let match = regex.firstMatch(in: text, range: NSRange(text.startIndex..., in: text)),
+              let range = Range(match.range(at: 1), in: text)
+        else { return nil }
+        let word = String(text[range]).lowercased()
+        let words = ["one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10]
+        let count = Int(word) ?? words[word]
+        guard let count else { return nil }
+        return min(max(count, 1), 10)
+    }
+
+    private static func namedDifficulty(in text: String) -> Difficulty? {
+        let pattern = #"\b(easy|medium|hard|expert)\b"#
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]),
+              let match = regex.firstMatch(in: text, range: NSRange(text.startIndex..., in: text)),
+              let range = Range(match.range(at: 1), in: text)
+        else { return nil }
+        return Difficulty(rawValue: String(text[range]).lowercased())
+    }
+
     private static func label(in text: String) -> String {
         let lower = text.lowercased()
         if lower.contains("gym") { return "Gym" }
+        if lower.contains("exercise") || lower.contains("workout") { return "Exercise" }
         if lower.contains("work") { return "Work" }
         if lower.contains("wake") { return "Wake up" }
         if lower.contains("school") { return "School" }
-        if lower.contains("med") { return "Medicine" }
+        if lower.contains("medicine") || lower.range(of: #"\bmeds?\b"#, options: .regularExpression) != nil { return "Medicine" }
         return "Alarm"
     }
 }
